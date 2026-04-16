@@ -33,6 +33,9 @@ const { log, EventType } = require('./src/utils/logger');
 const { authMiddleware } = require('./src/middleware/auth');
 const processMonitor = require('./src/monitor/processMonitor');
 
+const cloudSync = require('./src/monitor/cloudSync');
+const downloadWatcher = require('./src/monitor/downloadWatcher');
+
 const app = express();
 const PORT = 3847;
 
@@ -43,11 +46,20 @@ app.use(express.urlencoded({ extended: true }));
 // Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
-// API auth middleware
+// API auth and license middleware
 app.use('/api', (req, res, next) => {
-  if (req.path === '/auth/login' || req.path === '/auth/setup-check') {
+  const skipRoutes = ['/auth/login', '/auth/setup-check', '/auth/license', '/auth/activate'];
+  if (skipRoutes.includes(req.path)) {
     return next();
   }
+
+  // 1. Strict License check
+  const { getLicenseInfo } = require('./src/utils/license');
+  if (getLicenseInfo().isExpired) {
+    return res.status(403).json({ error: 'LICENSE_EXPIRED', message: 'Bạn cần nhập Key bản quyền để sử dụng.' });
+  }
+
+  // 2. Auth check
   authMiddleware(req, res, next);
 });
 
@@ -58,6 +70,8 @@ app.use('/api/schedules', require('./src/api/scheduleRoutes'));
 app.use('/api/logs', require('./src/api/logRoutes'));
 app.use('/api/settings', require('./src/api/settingsRoutes'));
 app.use('/api/websites', require('./src/api/websiteRoutes'));
+app.use('/api/sync', require('./src/api/syncRoutes'));
+app.use('/api/scanner', require('./src/api/scannerRoutes'));
 
 // SPA fallback
 app.get('*', (req, res) => {
@@ -111,6 +125,12 @@ const serverInstance = app.listen(PORT, () => {
   // Apply blocked websites to Windows hosts file
   const websiteRoutes = require('./src/api/websiteRoutes');
   websiteRoutes.applyBackgroundBlocks();
+
+  // Start cloud sync (every 5 minutes)
+  cloudSync.startAutoSync(5);
+
+  // Start download watcher - auto-block new .exe files
+  downloadWatcher.start();
 
   log(EventType.SYSTEM, `PC Guardian khởi động (Electron mode)`);
 });
