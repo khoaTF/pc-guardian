@@ -27,20 +27,14 @@ function getLicenseInfo() {
   if (!licenseData) {
     licenseData = {
       installedAt: Date.now(),
-      status: 'trial',
+      status: 'expired',
       key: null
     };
     writeData('license.json', licenseData);
   }
   
-  const now = Date.now();
-  const trialMs = TRIAL_DAYS * 24 * 60 * 60 * 1000;
-  const isTrialExpired = (now - licenseData.installedAt) > trialMs;
-  let remainingDays = Math.ceil((trialMs - (now - licenseData.installedAt)) / (24*60*60*1000));
-  if (remainingDays < 0) remainingDays = 0;
-  
-  // Kiểm tra thời hạn dùng thử
-  if (licenseData.status === 'trial' && isTrialExpired) {
+  // Nếu máy cũ đang ở trạng thái dùng thử, tự động chuyển sang hết hạn
+  if (licenseData.status === 'trial') {
     licenseData.status = 'expired';
     writeData('license.json', licenseData);
   }
@@ -56,7 +50,7 @@ function getLicenseInfo() {
   return {
     ...licenseData,
     deviceId: getDeviceId(),
-    remainingDays,
+    remainingDays: 0,
     isExpired: licenseData.status === 'expired'
   };
 }
