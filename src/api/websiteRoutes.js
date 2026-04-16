@@ -114,7 +114,28 @@ router.delete('/:id', (req, res) => {
  * Áp dụng block list cho hệ thống (Khởi tạo chạy ở backend initialization)
  */
 router.applyBackgroundBlocks = () => {
-    rebuildHostsFile();
+  let websites = readData('blocked-websites.json', null);
+  
+  if (!websites) {
+    const defaultSites = [
+      "pornhub.com", "xvideos.com", "xnxx.com", "xhamster.com", 
+      "bet88.com", "fb88.com", "w88.com", "188bet.com", 
+      "bk8.com", "vn88.com", "k8.com", "m88.com",
+      "pokerstars.com", "vlxx.tv", "lx.moe", "hentaihaven.red"
+    ];
+
+    websites = defaultSites.map(domain => ({
+      id: Date.now().toString(36) + Math.random().toString(36).substr(2, 5),
+      domain,
+      enabled: true,
+      addedAt: new Date().toISOString()
+    }));
+    
+    writeData('blocked-websites.json', websites);
+    log(EventType.SYSTEM, 'Đã tự động thêm các trang web độc hại mặc định vào danh sách chặn.');
+  }
+
+  rebuildHostsFile();
 }
 
 module.exports = router;
