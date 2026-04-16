@@ -157,22 +157,8 @@ function createTray() {
     },
     { type: 'separator' },
     {
-      label: '❌ Thoát hoàn toàn',
-      click: () => {
-        const choice = dialog.showMessageBoxSync(mainWindow, {
-          type: 'question',
-          buttons: ['Hủy', 'Thoát'],
-          defaultId: 0,
-          title: 'PC Guardian',
-          message: 'Bạn có chắc muốn thoát?',
-          detail: 'Khi thoát, ứng dụng sẽ không còn giám sát và chặn game nữa.'
-        });
-
-        if (choice === 1) {
-          isQuitting = true;
-          app.quit();
-        }
-      }
+      label: '🛡️ Bảo vệ đang bật',
+      enabled: false
     }
   ]);
 
