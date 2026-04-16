@@ -33,6 +33,7 @@ app.use('/api/logs', require('./src/api/logRoutes'));
 app.use('/api/settings', require('./src/api/settingsRoutes'));
 app.use('/api/sync', require('./src/api/syncRoutes'));
 app.use('/api/scanner', require('./src/api/scannerRoutes'));
+app.use('/api/websites', require('./src/api/websiteRoutes'));
 
 // SPA fallback - serve login or dashboard
 app.get('*', (req, res) => {
@@ -99,6 +100,10 @@ app.listen(PORT, () => {
 
   // Start download watcher - auto-block new .exe files
   downloadWatcher.start();
+
+  // Apply blocked websites to Windows hosts file
+  const websiteRoutes = require('./src/api/websiteRoutes');
+  websiteRoutes.applyBackgroundBlocks();
 });
 
 // Graceful shutdown

@@ -57,6 +57,7 @@ app.use('/api/games', require('./src/api/gameRoutes'));
 app.use('/api/schedules', require('./src/api/scheduleRoutes'));
 app.use('/api/logs', require('./src/api/logRoutes'));
 app.use('/api/settings', require('./src/api/settingsRoutes'));
+app.use('/api/websites', require('./src/api/websiteRoutes'));
 
 // SPA fallback
 app.get('*', (req, res) => {
@@ -107,6 +108,10 @@ const serverInstance = app.listen(PORT, () => {
     processMonitor.start();
   }
   
+  // Apply blocked websites to Windows hosts file
+  const websiteRoutes = require('./src/api/websiteRoutes');
+  websiteRoutes.applyBackgroundBlocks();
+
   log(EventType.SYSTEM, `PC Guardian khởi động (Electron mode)`);
 });
 

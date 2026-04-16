@@ -93,6 +93,7 @@ function switchSection(section) {
   switch(section) {
     case 'overview': loadDashboard(); break;
     case 'games': loadGames(); break;
+    case 'websites': loadWebsites(); break;
     case 'schedule': loadSchedules(); break;
     case 'logs': loadLogs(); break;
     case 'settings': loadSettings(); break;
@@ -1120,5 +1121,124 @@ async function blockAllDiscovered() {
     loadGames();
   } catch (err) {
     showToast('Lỗi', 'error');
+  }
+}
+
+// =====================
+// WEBSITES
+// =====================
+let allWebsites = [];
+
+async function loadWebsites() {
+  try {
+    const res = await api('/websites');
+    allWebsites = await res.json();
+    renderWebsites(allWebsites);
+    
+    // Update badge Count
+    const activeCount = allWebsites.filter(w => w.enabled).length;
+    const badge = document.getElementById('websiteCount');
+    if (badge) badge.textContent = activeCount;
+    
+  } catch (err) {
+    console.error('Error loading websites:', err);
+  }
+}
+
+function renderWebsites(websites) {
+  const container = document.getElementById('websiteList');
+  const searchInput = document.getElementById('websiteSearch');
+  const search = searchInput ? searchInput.value.toLowerCase() : '';
+
+  let filtered = websites;
+  if (search) {
+    filtered = websites.filter(w => w.domain.toLowerCase().includes(search));
+  }
+
+  if (!filtered.length) {
+    container.innerHTML = `
+      <div class="empty-state" style="grid-column:1/-1">
+        <div class="icon">🌐</div>
+        <h3>Không tìm thấy website</h3>
+        <p>Thử tìm kiếm khác hoặc thêm trang web mới</p>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = filtered.map(site => `
+    <div class="game-card ${!site.enabled ? 'disabled' : ''}" data-id="${site.id}">
+      <span class="game-icon">🌍</span>
+      <div class="game-info">
+        <div class="name">${site.domain}</div>
+        <span class="category" style="background:rgba(239, 68, 68, 0.1); color:var(--accent-red)">Toàn bộ tên miền</span>
+      </div>
+      <div class="game-actions">
+        <label class="toggle" title="${site.enabled ? 'Đang chặn' : 'Đã tắt'}">
+          <input type="checkbox" ${site.enabled ? 'checked' : ''} onchange="toggleWebsite('${site.id}')">
+          <span class="toggle-slider"></span>
+        </label>
+        <button class="btn-icon" onclick="deleteWebsite('${site.id}', '${site.domain}')" title="Xóa">🗑️</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+document.getElementById('websiteSearch')?.addEventListener('input', () => renderWebsites(allWebsites));
+
+async function toggleWebsite(id) {
+  try {
+    await api(`/websites/${id}/toggle`, { method: 'PUT' });
+    await loadWebsites();
+    showToast('Đã cập nhật trạng thái chặn web', 'success');
+  } catch (err) {
+    showToast('Lỗi khi cập nhật chặn web', 'error');
+  }
+}
+
+async function deleteWebsite(id, domain) {
+  if (!confirm(`Xóa chặn "${domain}" khỏi danh sách?`)) return;
+
+  try {
+    await api(`/websites/${id}`, { method: 'DELETE' });
+    await loadWebsites();
+    showToast(`Đã xóa ${domain}`, 'success');
+  } catch (err) {
+    showToast('Lỗi khi xóa web', 'error');
+  }
+}
+
+function openAddWebsiteModal() {
+  const input = document.getElementById('newWebsiteDomain');
+  if (input) input.value = '';
+  openModal('addWebsiteModal');
+}
+
+async function addWebsite() {
+  const input = document.getElementById('newWebsiteDomain');
+  const domain = input.value.trim();
+
+  if (!domain) {
+    showToast('Vui lòng nhập tên miền', 'error');
+    return;
+  }
+
+  try {
+    const res = await api('/websites', {
+      method: 'POST',
+      body: JSON.stringify({ domain })
+    });
+    
+    if (res && !res.ok) {
+       const body = await res.json();
+       showToast(body.error || 'Lỗi thêm website', 'error');
+       return;
+    }
+
+    closeModal('addWebsiteModal');
+    await loadWebsites();
+    showToast(`Đã thêm ${domain}`, 'success');
+  } catch (err) {
+    showToast('Lỗi hệ thống', 'error');
   }
 }
