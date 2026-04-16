@@ -19,7 +19,7 @@
     "publish": [
       {
         "provider": "github",
-        "owner": "khoal",
+        "owner": "khoaTF",
         "repo": "pc-guardian"
       }
     ],
