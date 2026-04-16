@@ -28,6 +28,11 @@ async function api(path, options = {}) {
     return null;
   }
 
+  if (res.status === 403) {
+    window.location.href = '/activate.html';
+    return null;
+  }
+
   return res;
 }
 

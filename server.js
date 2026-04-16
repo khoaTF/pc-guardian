@@ -17,11 +17,20 @@ app.use(express.urlencoded({ extended: true }));
 // Serve static files (no auth required)
 app.use(express.static(path.join(__dirname, 'public')));
 
-// API auth middleware (applied to /api/* except login)
+// API auth and license middleware
 app.use('/api', (req, res, next) => {
-  if (req.path === '/auth/login' || req.path === '/auth/setup-check') {
+  const skipRoutes = ['/auth/login', '/auth/setup-check', '/auth/license', '/auth/activate'];
+  if (skipRoutes.includes(req.path)) {
     return next();
   }
+
+  // 1. Strict License check
+  const { getLicenseInfo } = require('./src/utils/license');
+  if (getLicenseInfo().isExpired) {
+    return res.status(403).json({ error: 'LICENSE_EXPIRED', message: 'Bạn cần nhập Key bản quyền để sử dụng.' });
+  }
+
+  // 2. Auth check
   authMiddleware(req, res, next);
 });
 
