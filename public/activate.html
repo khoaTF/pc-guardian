@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PC Guardian - Kích hoạt Bản quyền">
+  <title>PC Guardian - Kích hoạt Bản quyền</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+</head>
+<body>
+  <div class="login-page" id="activationPage">
+    <div class="login-bg-effects">
+      <div class="orb" style="background: var(--accent-red)"></div>
+      <div class="orb"></div>
+    </div>
+
+    <div class="login-card" style="max-width: 450px;">
+      <div class="login-logo">
+        <span class="shield-icon" style="color: var(--accent-red)">🔑</span>
+        <h1>Kích Hoạt Bản Quyền</h1>
+        <p>Phần mềm của bạn đã hết hạn dùng thử.<br>Vui lòng nhập mã kích hoạt để tiếp tục bảo vệ hệ thống.</p>
+        <p style="font-size: 0.8em; margin-top: 10px; color: var(--text-muted)">Mã thiết bị (Device ID): <span id="deviceIdDisplay" style="font-family: monospace; color: var(--text-light)">Đang tải...</span></p>
+      </div>
+
+      <div class="login-error" id="activationError"></div>
+
+      <form class="login-form" id="activationForm">
+        <div class="input-group">
+          <input
+            type="text"
+            id="keyInput"
+            placeholder="Nhập Khóa Bản Quyền (XXXXXXXX-XXXX...)"
+            autocomplete="off"
+            autofocus
+            style="text-transform: uppercase;"
+          >
+        </div>
+        <button type="submit" class="btn-login" id="activateBtn" style="background: var(--gradient-primary)">
+          Kích Hoạt Ngay
+        </button>
+      </form>
+
+      <p class="login-hint" id="activationHint" style="margin-top: 20px;">
+        Liên hệ nhà cung cấp để mua khóa bản quyền.
+      </p>
+    </div>
+  </div>
+
+  <script src="/js/activate.js"></script>
+</body>
+</html>

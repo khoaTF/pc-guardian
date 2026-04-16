@@ -1,0 +1,496 @@
+{
+  "discovered": [
+    {
+      "name": "_Oxygen Not Included - LND Game Launcher",
+      "processName": "_Oxygen Not Included - LND Game Launcher.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\ONI.vU56679336_LinkNeverDie.Com\\_Oxygen Not Included - LND Game Launcher.exe",
+      "directory": "C:\\Users\\khoal\\Downloads\\ONI.vU56679336_LinkNeverDie.Com",
+      "folderName": "ONI.vU56679336_LinkNeverDie.Com",
+      "sizeMB": 1,
+      "confidence": 100,
+      "reasons": [
+        "Tên chứa keyword game",
+        "Phát hiện game engine",
+        "Pattern tên game"
+      ],
+      "modified": "2025-02-05T12:05:14.113Z"
+    },
+    {
+      "name": "Dockmod",
+      "processName": "Dockmod.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024\\Dockmod.exe",
+      "directory": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024",
+      "folderName": "MyDockFinder 2024",
+      "sizeMB": 0,
+      "confidence": 90,
+      "reasons": [
+        "Tên chứa keyword game",
+        "Phát hiện game engine"
+      ],
+      "modified": "2024-09-16T09:03:11.157Z"
+    },
+    {
+      "name": "Dockmod64",
+      "processName": "Dockmod64.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024\\Dockmod64.exe",
+      "directory": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024",
+      "folderName": "MyDockFinder 2024",
+      "sizeMB": 0,
+      "confidence": 90,
+      "reasons": [
+        "Tên chứa keyword game",
+        "Phát hiện game engine"
+      ],
+      "modified": "2024-09-16T09:03:11.311Z"
+    },
+    {
+      "name": "Dockmod64arm",
+      "processName": "Dockmod64arm.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024\\Dockmod64arm.exe",
+      "directory": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024",
+      "folderName": "MyDockFinder 2024",
+      "sizeMB": 0,
+      "confidence": 90,
+      "reasons": [
+        "Tên chứa keyword game",
+        "Phát hiện game engine"
+      ],
+      "modified": "2024-09-16T09:03:11.371Z"
+    },
+    {
+      "name": "LND Mod Manager",
+      "processName": "LND Mod Manager.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\ONI.vU56679336_LinkNeverDie.Com\\LND Mod Manager.exe",
+      "directory": "C:\\Users\\khoal\\Downloads\\ONI.vU56679336_LinkNeverDie.Com",
+      "folderName": "ONI.vU56679336_LinkNeverDie.Com",
+      "sizeMB": 0,
+      "confidence": 90,
+      "reasons": [
+        "Tên chứa keyword game",
+        "Phát hiện game engine"
+      ],
+      "modified": "2025-07-24T07:07:19.574Z"
+    },
+    {
+      "name": "node",
+      "processName": "node.exe",
+      "path": "C:\\Users\\khoal\\AppData\\Local\\ms-playwright-go\\1.50.1\\node.exe",
+      "source": "running",
+      "confidence": 60,
+      "reasons": [
+        "Đang chạy, tên nghi ngờ là game"
+      ]
+    },
+    {
+      "name": "GenshinImpact_install_ua_6f24e122dac1",
+      "processName": "GenshinImpact_install_ua_6f24e122dac1.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\GenshinImpact_install_ua_6f24e122dac1.exe",
+      "directory": "C:\\Users\\khoal\\Downloads",
+      "folderName": "Downloads",
+      "sizeMB": 141,
+      "confidence": 55,
+      "reasons": [
+        "Tên chứa keyword game",
+        "File khá lớn (141MB)"
+      ],
+      "modified": "2024-04-25T05:30:14.382Z"
+    },
+    {
+      "name": "VSCodeUserSetup-x64-1.88.1",
+      "processName": "VSCodeUserSetup-x64-1.88.1.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\VSCodeUserSetup-x64-1.88.1.exe",
+      "directory": "C:\\Users\\khoal\\Downloads",
+      "folderName": "Downloads",
+      "sizeMB": 95,
+      "confidence": 55,
+      "reasons": [
+        "Tên chứa keyword game",
+        "File khá lớn (95MB)"
+      ],
+      "modified": "2024-04-23T00:09:33.916Z"
+    },
+    {
+      "name": "dock",
+      "processName": "dock.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024\\dock.exe",
+      "directory": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024",
+      "folderName": "MyDockFinder 2024",
+      "sizeMB": 6,
+      "confidence": 50,
+      "reasons": [
+        "Phát hiện game engine"
+      ],
+      "modified": "2024-09-16T09:03:11.051Z"
+    },
+    {
+      "name": "Dock_64",
+      "processName": "Dock_64.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024\\Dock_64.exe",
+      "directory": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024",
+      "folderName": "MyDockFinder 2024",
+      "sizeMB": 5,
+      "confidence": 50,
+      "reasons": [
+        "Phát hiện game engine"
+      ],
+      "modified": "2024-09-16T09:03:12.475Z"
+    },
+    {
+      "name": "Mydock",
+      "processName": "Mydock.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024\\Mydock.exe",
+      "directory": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024",
+      "folderName": "MyDockFinder 2024",
+      "sizeMB": 0,
+      "confidence": 50,
+      "reasons": [
+        "Phát hiện game engine"
+      ],
+      "modified": "2024-09-16T09:03:12.590Z"
+    },
+    {
+      "name": "ScreenRound",
+      "processName": "ScreenRound.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024\\ScreenRound.exe",
+      "directory": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024",
+      "folderName": "MyDockFinder 2024",
+      "sizeMB": 0,
+      "confidence": 50,
+      "reasons": [
+        "Phát hiện game engine"
+      ],
+      "modified": "2024-09-16T09:03:12.707Z"
+    },
+    {
+      "name": "temp",
+      "processName": "temp.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024\\temp.exe",
+      "directory": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024",
+      "folderName": "MyDockFinder 2024",
+      "sizeMB": 6,
+      "confidence": 50,
+      "reasons": [
+        "Phát hiện game engine"
+      ],
+      "modified": "2024-09-16T09:03:12.989Z"
+    },
+    {
+      "name": "Temperature",
+      "processName": "Temperature.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024\\Temperature.exe",
+      "directory": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024",
+      "folderName": "MyDockFinder 2024",
+      "sizeMB": 0,
+      "confidence": 50,
+      "reasons": [
+        "Phát hiện game engine"
+      ],
+      "modified": "2024-09-16T09:03:13.192Z"
+    },
+    {
+      "name": "trayico",
+      "processName": "trayico.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024\\trayico.exe",
+      "directory": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024",
+      "folderName": "MyDockFinder 2024",
+      "sizeMB": 0,
+      "confidence": 50,
+      "reasons": [
+        "Phát hiện game engine"
+      ],
+      "modified": "2024-09-16T09:03:13.255Z"
+    },
+    {
+      "name": "UiAccess",
+      "processName": "UiAccess.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024\\UiAccess.exe",
+      "directory": "C:\\Users\\khoal\\Downloads\\MyDockFinder 2024",
+      "folderName": "MyDockFinder 2024",
+      "sizeMB": 0,
+      "confidence": 50,
+      "reasons": [
+        "Phát hiện game engine"
+      ],
+      "modified": "2024-09-16T09:03:13.338Z"
+    },
+    {
+      "name": "GSE - Change Name",
+      "processName": "GSE - Change Name.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\ONI.vU56679336_LinkNeverDie.Com\\GSE - Change Name.exe",
+      "directory": "C:\\Users\\khoal\\Downloads\\ONI.vU56679336_LinkNeverDie.Com",
+      "folderName": "ONI.vU56679336_LinkNeverDie.Com",
+      "sizeMB": 0,
+      "confidence": 50,
+      "reasons": [
+        "Phát hiện game engine"
+      ],
+      "modified": "2023-12-06T05:37:14.432Z"
+    },
+    {
+      "name": "OxygenNotIncluded",
+      "processName": "OxygenNotIncluded.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\ONI.vU56679336_LinkNeverDie.Com\\OxygenNotIncluded.exe",
+      "directory": "C:\\Users\\khoal\\Downloads\\ONI.vU56679336_LinkNeverDie.Com",
+      "folderName": "ONI.vU56679336_LinkNeverDie.Com",
+      "sizeMB": 1,
+      "confidence": 50,
+      "reasons": [
+        "Phát hiện game engine"
+      ],
+      "modified": "2025-07-18T01:22:52.535Z"
+    },
+    {
+      "name": "Restarter",
+      "processName": "Restarter.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\ONI.vU56679336_LinkNeverDie.Com\\Restarter.exe",
+      "directory": "C:\\Users\\khoal\\Downloads\\ONI.vU56679336_LinkNeverDie.Com",
+      "folderName": "ONI.vU56679336_LinkNeverDie.Com",
+      "sizeMB": 4,
+      "confidence": 50,
+      "reasons": [
+        "Phát hiện game engine"
+      ],
+      "modified": "2025-07-18T01:22:52.615Z"
+    },
+    {
+      "name": "UnityCrashHandler64",
+      "processName": "UnityCrashHandler64.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\ONI.vU56679336_LinkNeverDie.Com\\UnityCrashHandler64.exe",
+      "directory": "C:\\Users\\khoal\\Downloads\\ONI.vU56679336_LinkNeverDie.Com",
+      "folderName": "ONI.vU56679336_LinkNeverDie.Com",
+      "sizeMB": 1,
+      "confidence": 50,
+      "reasons": [
+        "Phát hiện game engine"
+      ],
+      "modified": "2025-07-18T01:22:52.615Z"
+    },
+    {
+      "name": "GalaxyBudsClient_Windows-64bit_Portable",
+      "processName": "GalaxyBudsClient_Windows-64bit_Portable.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\GalaxyBudsClient_Windows-64bit_Portable.exe",
+      "directory": "C:\\Users\\khoal\\Downloads",
+      "folderName": "Downloads",
+      "sizeMB": 230,
+      "confidence": 50,
+      "reasons": [
+        "File lớn (230MB)",
+        "Pattern tên game"
+      ],
+      "modified": "2024-06-11T06:24:54.710Z"
+    },
+    {
+      "name": "CLO_Standalone_OnlineAuth_x64",
+      "processName": "CLO_Standalone_OnlineAuth_x64.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\Crack\\CLO_Standalone_OnlineAuth_x64.exe",
+      "directory": "C:\\Users\\khoal\\Downloads\\Crack",
+      "folderName": "Crack",
+      "sizeMB": 28,
+      "confidence": 40,
+      "reasons": [
+        "Tên chứa keyword game"
+      ],
+      "modified": "2025-10-31T09:20:38.136Z"
+    },
+    {
+      "name": "ArknightsEndfield_Downloader_ua-svqb3z731tbc",
+      "processName": "ArknightsEndfield_Downloader_ua-svqb3z731tbc.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\ArknightsEndfield_Downloader_ua-svqb3z731tbc.exe",
+      "directory": "C:\\Users\\khoal\\Downloads",
+      "folderName": "Downloads",
+      "sizeMB": 8,
+      "confidence": 40,
+      "reasons": [
+        "Tên chứa keyword game"
+      ],
+      "modified": "2026-02-09T01:16:06.275Z"
+    },
+    {
+      "name": "Codex Installer",
+      "processName": "Codex Installer.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\Codex Installer.exe",
+      "directory": "C:\\Users\\khoal\\Downloads",
+      "folderName": "Downloads",
+      "sizeMB": 1,
+      "confidence": 40,
+      "reasons": [
+        "Tên chứa keyword game"
+      ],
+      "modified": "2026-03-06T08:17:32.197Z"
+    },
+    {
+      "name": "Install-BrownDust2 - Adventure RPG-GooglePlayGames-Beta",
+      "processName": "Install-BrownDust2 - Adventure RPG-GooglePlayGames-Beta.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\Install-BrownDust2 - Adventure RPG-GooglePlayGames-Beta.exe",
+      "directory": "C:\\Users\\khoal\\Downloads",
+      "folderName": "Downloads",
+      "sizeMB": 25,
+      "confidence": 40,
+      "reasons": [
+        "Tên chứa keyword game"
+      ],
+      "modified": "2025-08-13T02:18:15.140Z"
+    },
+    {
+      "name": "SteamSetup",
+      "processName": "SteamSetup.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\SteamSetup.exe",
+      "directory": "C:\\Users\\khoal\\Downloads",
+      "folderName": "Downloads",
+      "sizeMB": 2,
+      "confidence": 40,
+      "reasons": [
+        "Tên chứa keyword game"
+      ],
+      "modified": "2024-07-04T04:44:38.060Z"
+    },
+    {
+      "name": "GalaxyBudsClient_Windows_64bit_Setup",
+      "processName": "GalaxyBudsClient_Windows_64bit_Setup.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\GalaxyBudsClient_Windows_64bit_Setup.exe",
+      "directory": "C:\\Users\\khoal\\Downloads",
+      "folderName": "Downloads",
+      "sizeMB": 104,
+      "confidence": 35,
+      "reasons": [
+        "File khá lớn (104MB)",
+        "Pattern tên game"
+      ],
+      "modified": "2025-08-27T02:17:06.991Z"
+    },
+    {
+      "name": "android-studio-2024.3.2.14-windows",
+      "processName": "android-studio-2024.3.2.14-windows.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\Programs\\android-studio-2024.3.2.14-windows.exe",
+      "directory": "C:\\Users\\khoal\\Downloads\\Programs",
+      "folderName": "Programs",
+      "sizeMB": 1261,
+      "confidence": 30,
+      "reasons": [
+        "File lớn (1261MB)"
+      ],
+      "modified": "2025-05-17T15:17:09.688Z"
+    },
+    {
+      "name": "AntutuBenchmark_x64_Setup",
+      "processName": "AntutuBenchmark_x64_Setup.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\AntutuBenchmark_x64_Setup.exe",
+      "directory": "C:\\Users\\khoal\\Downloads",
+      "folderName": "Downloads",
+      "sizeMB": 685,
+      "confidence": 30,
+      "reasons": [
+        "File lớn (685MB)"
+      ],
+      "modified": "2026-03-09T03:44:20.327Z"
+    },
+    {
+      "name": "CrystalDiskInfo9_6_3Shizuku",
+      "processName": "CrystalDiskInfo9_6_3Shizuku.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\CrystalDiskInfo9_6_3Shizuku.exe",
+      "directory": "C:\\Users\\khoal\\Downloads",
+      "folderName": "Downloads",
+      "sizeMB": 220,
+      "confidence": 30,
+      "reasons": [
+        "File lớn (220MB)"
+      ],
+      "modified": "2025-05-19T06:42:41.442Z"
+    },
+    {
+      "name": "Docker Desktop Installer",
+      "processName": "Docker Desktop Installer.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\Docker Desktop Installer.exe",
+      "directory": "C:\\Users\\khoal\\Downloads",
+      "folderName": "Downloads",
+      "sizeMB": 602,
+      "confidence": 30,
+      "reasons": [
+        "File lớn (602MB)"
+      ],
+      "modified": "2026-03-23T02:42:40.746Z"
+    },
+    {
+      "name": "iVMS-4200V3.13.0.5_E",
+      "processName": "iVMS-4200V3.13.0.5_E.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\iVMS-4200V3.13.0.5_E.exe",
+      "directory": "C:\\Users\\khoal\\Downloads",
+      "folderName": "Downloads",
+      "sizeMB": 332,
+      "confidence": 30,
+      "reasons": [
+        "File lớn (332MB)"
+      ],
+      "modified": "2025-08-04T01:04:02.232Z"
+    },
+    {
+      "name": "jdk-24_windows-x64_bin",
+      "processName": "jdk-24_windows-x64_bin.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\jdk-24_windows-x64_bin.exe",
+      "directory": "C:\\Users\\khoal\\Downloads",
+      "folderName": "Downloads",
+      "sizeMB": 206,
+      "confidence": 30,
+      "reasons": [
+        "File lớn (206MB)"
+      ],
+      "modified": "2025-05-18T09:43:44.230Z"
+    },
+    {
+      "name": "PBIDesktopSetup_x64 (1)",
+      "processName": "PBIDesktopSetup_x64 (1).exe",
+      "path": "C:\\Users\\khoal\\Downloads\\PBIDesktopSetup_x64 (1).exe",
+      "directory": "C:\\Users\\khoal\\Downloads",
+      "folderName": "Downloads",
+      "sizeMB": 524,
+      "confidence": 30,
+      "reasons": [
+        "File lớn (524MB)"
+      ],
+      "modified": "2024-09-20T02:29:09.040Z"
+    },
+    {
+      "name": "PBIDesktopSetup_x64",
+      "processName": "PBIDesktopSetup_x64.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\PBIDesktopSetup_x64.exe",
+      "directory": "C:\\Users\\khoal\\Downloads",
+      "folderName": "Downloads",
+      "sizeMB": 489,
+      "confidence": 30,
+      "reasons": [
+        "File lớn (489MB)"
+      ],
+      "modified": "2024-06-10T03:34:24.066Z"
+    },
+    {
+      "name": "SectionCompare",
+      "processName": "SectionCompare.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\SectionCompare.exe",
+      "directory": "C:\\Users\\khoal\\Downloads",
+      "folderName": "Downloads",
+      "sizeMB": 242,
+      "confidence": 30,
+      "reasons": [
+        "File lớn (242MB)"
+      ],
+      "modified": "2025-08-14T01:57:39.829Z"
+    },
+    {
+      "name": "SSMS-Setup-ENU",
+      "processName": "SSMS-Setup-ENU.exe",
+      "path": "C:\\Users\\khoal\\Downloads\\SSMS-Setup-ENU.exe",
+      "directory": "C:\\Users\\khoal\\Downloads",
+      "folderName": "Downloads",
+      "sizeMB": 473,
+      "confidence": 30,
+      "reasons": [
+        "File lớn (473MB)"
+      ],
+      "modified": "2024-12-08T16:37:58.845Z"
+    }
+  ],
+  "registryApps": [],
+  "totalScanned": 2,
+  "elapsedSeconds": 0.5,
+  "timestamp": "2026-04-16T04:21:23.586Z"
+}

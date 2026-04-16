@@ -1,0 +1,969 @@
+[
+  {
+    "name": "Steam",
+    "processNames": [
+      "steam.exe",
+      "steamwebhelper.exe"
+    ],
+    "category": "Platform",
+    "icon": "🎮",
+    "id": "default_0_mo0w6yso",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.920Z",
+    "isCustom": false
+  },
+  {
+    "name": "Epic Games Launcher",
+    "processNames": [
+      "EpicGamesLauncher.exe",
+      "EpicWebHelper.exe"
+    ],
+    "category": "Platform",
+    "icon": "🎮",
+    "id": "default_1_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "Riot Client",
+    "processNames": [
+      "RiotClientServices.exe",
+      "RiotClientUx.exe"
+    ],
+    "category": "Platform",
+    "icon": "🎮",
+    "id": "default_2_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "Battle.net",
+    "processNames": [
+      "Battle.net.exe",
+      "Battle.net Helper.exe"
+    ],
+    "category": "Platform",
+    "icon": "🎮",
+    "id": "default_3_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "EA App",
+    "processNames": [
+      "EADesktop.exe",
+      "EABackgroundService.exe"
+    ],
+    "category": "Platform",
+    "icon": "🎮",
+    "id": "default_4_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "League of Legends",
+    "processNames": [
+      "LeagueClient.exe",
+      "League of Legends.exe"
+    ],
+    "category": "MOBA",
+    "icon": "⚔️",
+    "id": "default_5_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "Valorant",
+    "processNames": [
+      "VALORANT.exe",
+      "VALORANT-Win64-Shipping.exe"
+    ],
+    "category": "FPS",
+    "icon": "🔫",
+    "id": "default_6_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "Counter-Strike 2",
+    "processNames": [
+      "cs2.exe"
+    ],
+    "category": "FPS",
+    "icon": "🔫",
+    "id": "default_7_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "Fortnite",
+    "processNames": [
+      "FortniteClient-Win64-Shipping.exe",
+      "FortniteLauncher.exe"
+    ],
+    "category": "Battle Royale",
+    "icon": "🏝️",
+    "id": "default_8_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "PUBG",
+    "processNames": [
+      "TslGame.exe",
+      "ExecPubg.exe"
+    ],
+    "category": "Battle Royale",
+    "icon": "🪂",
+    "id": "default_9_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "Minecraft",
+    "processNames": [
+      "javaw.exe",
+      "Minecraft.Windows.exe",
+      "MinecraftLauncher.exe"
+    ],
+    "category": "Sandbox",
+    "icon": "⛏️",
+    "id": "default_10_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "Roblox",
+    "processNames": [
+      "RobloxPlayerBeta.exe",
+      "RobloxPlayerLauncher.exe"
+    ],
+    "category": "Platform",
+    "icon": "🧱",
+    "id": "default_11_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "Genshin Impact",
+    "processNames": [
+      "GenshinImpact.exe",
+      "YuanShen.exe"
+    ],
+    "category": "RPG",
+    "icon": "⚡",
+    "id": "default_12_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "Honkai: Star Rail",
+    "processNames": [
+      "StarRail.exe"
+    ],
+    "category": "RPG",
+    "icon": "🌟",
+    "id": "default_13_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "Apex Legends",
+    "processNames": [
+      "r5apex.exe"
+    ],
+    "category": "Battle Royale",
+    "icon": "🏆",
+    "id": "default_14_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "Dota 2",
+    "processNames": [
+      "dota2.exe"
+    ],
+    "category": "MOBA",
+    "icon": "⚔️",
+    "id": "default_15_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "Overwatch 2",
+    "processNames": [
+      "Overwatch.exe"
+    ],
+    "category": "FPS",
+    "icon": "🔫",
+    "id": "default_16_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "FIFA / EA FC",
+    "processNames": [
+      "FC25.exe",
+      "FIFA24.exe",
+      "FIFA23.exe"
+    ],
+    "category": "Sport",
+    "icon": "⚽",
+    "id": "default_17_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "GTA V",
+    "processNames": [
+      "GTA5.exe",
+      "GTAVLauncher.exe",
+      "PlayGTAV.exe"
+    ],
+    "category": "Action",
+    "icon": "🚗",
+    "id": "default_18_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "Liên Quân (Tencent Gaming Buddy)",
+    "processNames": [
+      "AndroidEmulator.exe",
+      "GameLoop.exe",
+      "TBGameDL.exe"
+    ],
+    "category": "Emulator",
+    "icon": "📱",
+    "id": "default_19_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "BlueStacks",
+    "processNames": [
+      "HD-Player.exe",
+      "Bluestacks.exe"
+    ],
+    "category": "Emulator",
+    "icon": "📱",
+    "id": "default_20_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "NoxPlayer",
+    "processNames": [
+      "Nox.exe",
+      "NoxVMHandle.exe"
+    ],
+    "category": "Emulator",
+    "icon": "📱",
+    "id": "default_21_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "LDPlayer",
+    "processNames": [
+      "LdBoxHeadless.exe",
+      "dnplayer.exe"
+    ],
+    "category": "Emulator",
+    "icon": "📱",
+    "id": "default_22_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "Among Us",
+    "processNames": [
+      "Among Us.exe"
+    ],
+    "category": "Party",
+    "icon": "🚀",
+    "id": "default_23_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "name": "Free Fire",
+    "processNames": [
+      "FreeFire.exe"
+    ],
+    "category": "Battle Royale",
+    "icon": "🔥",
+    "id": "default_24_mo0w6ysp",
+    "enabled": true,
+    "addedAt": "2026-04-16T03:00:58.921Z",
+    "isCustom": false
+  },
+  {
+    "id": "auto_mo0zoh3r_3wdh_0",
+    "name": "📥 ad",
+    "processNames": [
+      "ad.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.647Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\ad.exe",
+    "sizeMB": 40
+  },
+  {
+    "id": "auto_mo0zoh3r_uk9p_1",
+    "name": "📥 Advanced IP Scanner 2.5.4594.1 (1)",
+    "processNames": [
+      "Advanced_IP_Scanner_2.5.4594.1 (1).exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.647Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\Advanced_IP_Scanner_2.5.4594.1 (1).exe",
+    "sizeMB": 20
+  },
+  {
+    "id": "auto_mo0zoh3s_ic0h_2",
+    "name": "📥 Advanced IP Scanner 2.5.4594.1",
+    "processNames": [
+      "Advanced_IP_Scanner_2.5.4594.1.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.648Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\Advanced_IP_Scanner_2.5.4594.1.exe",
+    "sizeMB": 20
+  },
+  {
+    "id": "auto_mo0zoh3s_kqiw_3",
+    "name": "📥 aida64extreme800",
+    "processNames": [
+      "aida64extreme800.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.648Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\aida64extreme800.exe",
+    "sizeMB": 61
+  },
+  {
+    "id": "auto_mo0zoh3s_q3hj_4",
+    "name": "📥 Antigravity",
+    "processNames": [
+      "Antigravity.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.648Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\Antigravity.exe",
+    "sizeMB": 165
+  },
+  {
+    "id": "auto_mo0zoh3s_wp6u_5",
+    "name": "📥 AnyDesk (1)",
+    "processNames": [
+      "AnyDesk (1).exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.648Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\AnyDesk (1).exe",
+    "sizeMB": 5
+  },
+  {
+    "id": "auto_mo0zoh3s_r5nr_6",
+    "name": "📥 AnyDesk",
+    "processNames": [
+      "AnyDesk.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.648Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\AnyDesk.exe",
+    "sizeMB": 5
+  },
+  {
+    "id": "auto_mo0zoh3s_5vs9_7",
+    "name": "📥 ArknightsEndfield Downloader ua svqb3z731tbc",
+    "processNames": [
+      "ArknightsEndfield_Downloader_ua-svqb3z731tbc.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.648Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\ArknightsEndfield_Downloader_ua-svqb3z731tbc.exe",
+    "sizeMB": 8
+  },
+  {
+    "id": "auto_mo0zoh3s_dvmu_8",
+    "name": "📥 aspnetcore runtime 6.0.36 win x64",
+    "processNames": [
+      "aspnetcore-runtime-6.0.36-win-x64.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.648Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\aspnetcore-runtime-6.0.36-win-x64.exe",
+    "sizeMB": 9
+  },
+  {
+    "id": "auto_mo0zoh3s_bfei_9",
+    "name": "📥 BCTGL357.0086.EBU",
+    "processNames": [
+      "BCTGL357.0086.EBU.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.648Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\BCTGL357.0086.EBU.exe",
+    "sizeMB": 13
+  },
+  {
+    "id": "auto_mo0zoh3s_1a22_10",
+    "name": "📥 CFFExplorer",
+    "processNames": [
+      "CFFExplorer.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.648Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\CFFExplorer.exe",
+    "sizeMB": 5
+  },
+  {
+    "id": "auto_mo0zoh3t_e4p7_11",
+    "name": "📥 cpu z 2.17 msi en",
+    "processNames": [
+      "cpu-z_2.17-msi-en.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.649Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\cpu-z_2.17-msi-en.exe",
+    "sizeMB": 3
+  },
+  {
+    "id": "auto_mo0zoh3t_pau5_12",
+    "name": "📥 CrystalDiskInfo9 6 3Shizuku",
+    "processNames": [
+      "CrystalDiskInfo9_6_3Shizuku.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.649Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\CrystalDiskInfo9_6_3Shizuku.exe",
+    "sizeMB": 220
+  },
+  {
+    "id": "auto_mo0zoh3t_9lch_13",
+    "name": "📥 dotnet sdk 6.0.428 win x64",
+    "processNames": [
+      "dotnet-sdk-6.0.428-win-x64.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.649Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\dotnet-sdk-6.0.428-win-x64.exe",
+    "sizeMB": 198
+  },
+  {
+    "id": "auto_mo0zoh3t_tcfi_14",
+    "name": "📥 GalaxyBudsClient Windows 64bit Portable",
+    "processNames": [
+      "GalaxyBudsClient_Windows-64bit_Portable.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.649Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\GalaxyBudsClient_Windows-64bit_Portable.exe",
+    "sizeMB": 230
+  },
+  {
+    "id": "auto_mo0zoh3t_z61d_15",
+    "name": "📥 GearUP 2.1.0 win",
+    "processNames": [
+      "GearUP-2.1.0-win.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.649Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\GearUP-2.1.0-win.exe",
+    "sizeMB": 58
+  },
+  {
+    "id": "auto_mo0zoh3t_ut8x_16",
+    "name": "📥 General ConfigTool ChnEng V5.001.0000003.1.R.20231130",
+    "processNames": [
+      "General_ConfigTool_ChnEng_V5.001.0000003.1.R.20231130.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.649Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\General_ConfigTool_ChnEng_V5.001.0000003.1.R.20231130.exe",
+    "sizeMB": 34
+  },
+  {
+    "id": "auto_mo0zoh3u_1zi8_17",
+    "name": "📥 idman642build32f",
+    "processNames": [
+      "idman642build32f.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.650Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\idman642build32f.exe",
+    "sizeMB": 12
+  },
+  {
+    "id": "auto_mo0zoh3u_b3yz_18",
+    "name": "📥 instspeedfan452",
+    "processNames": [
+      "instspeedfan452.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.650Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\instspeedfan452.exe",
+    "sizeMB": 3
+  },
+  {
+    "id": "auto_mo0zoh3u_48g5_19",
+    "name": "📥 iVMS 4200V3.13.0.5 E",
+    "processNames": [
+      "iVMS-4200V3.13.0.5_E.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.650Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\iVMS-4200V3.13.0.5_E.exe",
+    "sizeMB": 332
+  },
+  {
+    "id": "auto_mo0zoh3u_9fd9_20",
+    "name": "📥 jdk 24 windows x64 bin",
+    "processNames": [
+      "jdk-24_windows-x64_bin.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.650Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\jdk-24_windows-x64_bin.exe",
+    "sizeMB": 206
+  },
+  {
+    "id": "auto_mo0zoh3u_c25v_21",
+    "name": "📥 Kaspersky",
+    "processNames": [
+      "Kaspersky.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.650Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\Kaspersky.exe",
+    "sizeMB": 6
+  },
+  {
+    "id": "auto_mo0zoh3u_wstb_22",
+    "name": "📥 LBP6030 V2111 WP EN",
+    "processNames": [
+      "LBP6030_V2111_WP_EN.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.650Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\LBP6030_V2111_WP_EN.exe",
+    "sizeMB": 68
+  },
+  {
+    "id": "auto_mo0zoh3u_h2gf_23",
+    "name": "📥 MediaCreationTool (1)",
+    "processNames": [
+      "MediaCreationTool (1).exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.650Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\MediaCreationTool (1).exe",
+    "sizeMB": 21
+  },
+  {
+    "id": "auto_mo0zoh3u_87op_24",
+    "name": "📥 MediaCreationTool (2)",
+    "processNames": [
+      "MediaCreationTool (2).exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.650Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\MediaCreationTool (2).exe",
+    "sizeMB": 21
+  },
+  {
+    "id": "auto_mo0zoh3u_5kjx_25",
+    "name": "📥 mediacreationtool",
+    "processNames": [
+      "mediacreationtool.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.650Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\mediacreationtool.exe",
+    "sizeMB": 11
+  },
+  {
+    "id": "auto_mo0zoh3u_1aio_26",
+    "name": "📥 MediaCreationTool 22H2",
+    "processNames": [
+      "MediaCreationTool_22H2.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.650Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\MediaCreationTool_22H2.exe",
+    "sizeMB": 19
+  },
+  {
+    "id": "auto_mo0zoh3v_zdq8_27",
+    "name": "📥 parsec windows (1)",
+    "processNames": [
+      "parsec-windows (1).exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.651Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\parsec-windows (1).exe",
+    "sizeMB": 4
+  },
+  {
+    "id": "auto_mo0zoh3v_b1xb_28",
+    "name": "📥 parsec windows",
+    "processNames": [
+      "parsec-windows.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.651Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\parsec-windows.exe",
+    "sizeMB": 4
+  },
+  {
+    "id": "auto_mo0zoh3v_jh4v_29",
+    "name": "📥 rufus 4.9",
+    "processNames": [
+      "rufus-4.9.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.651Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\rufus-4.9.exe",
+    "sizeMB": 2
+  },
+  {
+    "id": "auto_mo0zoh3v_7hqz_30",
+    "name": "📥 rustdesk 1.3.8 x86 64",
+    "processNames": [
+      "rustdesk-1.3.8-x86_64.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.651Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\rustdesk-1.3.8-x86_64.exe",
+    "sizeMB": 21
+  },
+  {
+    "id": "auto_mo0zoh3v_4d76_31",
+    "name": "📥 rustdesk 1.4.1 x86 64",
+    "processNames": [
+      "rustdesk-1.4.1-x86_64.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.651Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\rustdesk-1.4.1-x86_64.exe",
+    "sizeMB": 22
+  },
+  {
+    "id": "auto_mo0zoh3v_r25q_32",
+    "name": "📥 sc68 win lide120 1 02 ea33 3",
+    "processNames": [
+      "sc68-win-lide120-1_02-ea33_3.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.651Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\sc68-win-lide120-1_02-ea33_3.exe",
+    "sizeMB": 16
+  },
+  {
+    "id": "auto_mo0zoh3v_0eno_33",
+    "name": "📥 SectionCompare",
+    "processNames": [
+      "SectionCompare.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.651Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\SectionCompare.exe",
+    "sizeMB": 242
+  },
+  {
+    "id": "auto_mo0zoh3v_eo2w_34",
+    "name": "📥 SQL2022 SSEI Expr",
+    "processNames": [
+      "SQL2022-SSEI-Expr.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.651Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\SQL2022-SSEI-Expr.exe",
+    "sizeMB": 4
+  },
+  {
+    "id": "auto_mo0zoh3v_cwf0_35",
+    "name": "📥 TeamViewerQS x64",
+    "processNames": [
+      "TeamViewerQS_x64.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.651Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\TeamViewerQS_x64.exe",
+    "sizeMB": 31
+  },
+  {
+    "id": "auto_mo0zoh3w_cdvo_36",
+    "name": "📥 VirtualBox 7.0.16 162802 Win",
+    "processNames": [
+      "VirtualBox-7.0.16-162802-Win.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.652Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\VirtualBox-7.0.16-162802-Win.exe",
+    "sizeMB": 106
+  },
+  {
+    "id": "auto_mo0zoh3w_pgoe_37",
+    "name": "📥 Windows ISO Downloader",
+    "processNames": [
+      "Windows-ISO-Downloader.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.652Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\Windows-ISO-Downloader.exe",
+    "sizeMB": 7
+  },
+  {
+    "id": "auto_mo0zoh3w_39l0_38",
+    "name": "📥 Windows10Upgrade9252",
+    "processNames": [
+      "Windows10Upgrade9252.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.652Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\Windows10Upgrade9252.exe",
+    "sizeMB": 3
+  },
+  {
+    "id": "auto_mo0zoh3w_moe7_39",
+    "name": "📥 WinToUSB Free",
+    "processNames": [
+      "WinToUSB_Free.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.652Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\WinToUSB_Free.exe",
+    "sizeMB": 29
+  },
+  {
+    "id": "auto_mo0zoh3w_du0x_40",
+    "name": "📥 z03657L16",
+    "processNames": [
+      "z03657L16.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.652Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\z03657L16.exe",
+    "sizeMB": 55
+  },
+  {
+    "id": "auto_mo0zoh3w_btif_41",
+    "name": "📥 z03696L16",
+    "processNames": [
+      "z03696L16.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.652Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\z03696L16.exe",
+    "sizeMB": 68
+  },
+  {
+    "id": "auto_mo0zoh3w_fozd_42",
+    "name": "📥 z05917L16",
+    "processNames": [
+      "z05917L16.exe"
+    ],
+    "category": "Tải về",
+    "icon": "📥",
+    "enabled": true,
+    "addedAt": "2026-04-16T04:38:34.652Z",
+    "isCustom": true,
+    "autoDetected": true,
+    "detectedPath": "C:\\Users\\khoal\\Downloads\\z05917L16.exe",
+    "sizeMB": 68
+  }
+]

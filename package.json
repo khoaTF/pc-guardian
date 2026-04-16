@@ -1,0 +1,96 @@
+{
+  "name": "pc-guardian",
+  "version": "1.0.0",
+  "description": "PC Guardian - Ứng dụng quản lý máy tính & chặn game cho trẻ em",
+  "main": "electron-main.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "electron": "electron .",
+    "build": "electron-builder --win",
+    "build:portable": "electron-builder --win portable",
+    "build:nsis": "electron-builder --win nsis",
+    "release": "electron-builder --win -p always"
+  },
+  "build": {
+    "appId": "com.pcguardian.app",
+    "productName": "PC Guardian",
+    "copyright": "Copyright © 2026 PC Guardian",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "khoal",
+        "repo": "pc-guardian"
+      }
+    ],
+    "directories": {
+      "output": "dist",
+      "buildResources": "assets"
+    },
+    "files": [
+      "**/*",
+      "!dist/**",
+      "!node_modules/.cache/**"
+    ],
+    "extraResources": [
+      {
+        "from": "config",
+        "to": "config"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.png",
+      "requestedExecutionLevel": "requireAdministrator",
+      "signAndEditExecutable": false,
+      "forceCodeSigning": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "PC Guardian",
+      "installerLanguages": [
+        "vi_VN",
+        "en_US"
+      ],
+      "language": "1066"
+    },
+    "portable": {
+      "artifactName": "PC-Guardian-Portable-${version}.${ext}"
+    }
+  },
+  "keywords": [
+    "parental-control",
+    "game-blocker",
+    "pc-guardian"
+  ],
+  "author": "PC Guardian",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "electron-updater": "^6.8.3",
+    "express": "^4.18.2",
+    "node-machine-id": "^1.1.12",
+    "node-windows": "^1.0.0-beta.8",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "electron": "^35.2.1",
+    "electron-builder": "^25.1.8"
+  }
+}

@@ -1,0 +1,160 @@
+[
+  {
+    "id": "mo0zoh1r3eppg",
+    "timestamp": "2026-04-16T04:38:34.575Z",
+    "type": "system",
+    "message": "PC Guardian khởi động trên port 3847",
+    "details": {}
+  },
+  {
+    "id": "mo0zoh1an2e7x",
+    "timestamp": "2026-04-16T04:38:34.558Z",
+    "type": "monitor_start",
+    "message": "Bắt đầu giám sát process",
+    "details": {}
+  },
+  {
+    "id": "mo0z1jkb3sqza",
+    "timestamp": "2026-04-16T04:20:44.747Z",
+    "type": "login",
+    "message": "Đăng nhập thành công",
+    "details": {}
+  },
+  {
+    "id": "mo0z05uo6pck4",
+    "timestamp": "2026-04-16T04:19:40.320Z",
+    "type": "system",
+    "message": "PC Guardian khởi động trên port 3847",
+    "details": {}
+  },
+  {
+    "id": "mo0z05u7sh4an",
+    "timestamp": "2026-04-16T04:19:40.303Z",
+    "type": "monitor_start",
+    "message": "Bắt đầu giám sát process",
+    "details": {}
+  },
+  {
+    "id": "mo0yt704j8qna",
+    "timestamp": "2026-04-16T04:14:15.220Z",
+    "type": "login",
+    "message": "Đăng nhập thành công",
+    "details": {}
+  },
+  {
+    "id": "mo0yr16mmtr6y",
+    "timestamp": "2026-04-16T04:12:34.366Z",
+    "type": "system",
+    "message": "Cloud sync: +21 mới, ~0 cập nhật",
+    "details": {
+      "added": [
+        "Among Us",
+        "Apex Legends",
+        "BlueStacks",
+        "Counter-Strike 2",
+        "Discord",
+        "Dota 2",
+        "Epic Games",
+        "FIFA / EA FC",
+        "Fortnite",
+        "Genshin Impact",
+        "GTA V",
+        "Honkai Star Rail",
+        "League of Legends",
+        "Minecraft",
+        "NoxPlayer",
+        "Overwatch 2",
+        "PUBG",
+        "Roblox",
+        "Steam",
+        "Valorant",
+        "Zalo"
+      ],
+      "updated": []
+    }
+  },
+  {
+    "id": "mo0yr093a25iq",
+    "timestamp": "2026-04-16T04:12:33.159Z",
+    "type": "system",
+    "message": "PC Guardian khởi động trên port 3847",
+    "details": {}
+  },
+  {
+    "id": "mo0yr08n1kseq",
+    "timestamp": "2026-04-16T04:12:33.143Z",
+    "type": "monitor_start",
+    "message": "Bắt đầu giám sát process",
+    "details": {}
+  },
+  {
+    "id": "mo0y6v39wllua",
+    "timestamp": "2026-04-16T03:56:53.349Z",
+    "type": "login",
+    "message": "Đăng nhập thành công",
+    "details": {}
+  },
+  {
+    "id": "mo0y1tmcr3oqt",
+    "timestamp": "2026-04-16T03:52:58.164Z",
+    "type": "login",
+    "message": "Đăng nhập thành công",
+    "details": {}
+  },
+  {
+    "id": "mo0y1tmbsjz8v",
+    "timestamp": "2026-04-16T03:52:58.163Z",
+    "type": "system",
+    "message": "Thiết lập mật khẩu lần đầu",
+    "details": {}
+  },
+  {
+    "id": "mo0y0hy38bmwm",
+    "timestamp": "2026-04-16T03:51:56.379Z",
+    "type": "system",
+    "message": "PC Guardian khởi động trên port 3847",
+    "details": {}
+  },
+  {
+    "id": "mo0y0hxjp0rxl",
+    "timestamp": "2026-04-16T03:51:56.359Z",
+    "type": "monitor_start",
+    "message": "Bắt đầu giám sát process",
+    "details": {}
+  },
+  {
+    "id": "mo0wakhaa9w3n",
+    "timestamp": "2026-04-16T03:03:46.990Z",
+    "type": "login",
+    "message": "Đăng nhập thành công",
+    "details": {}
+  },
+  {
+    "id": "mo0w8lrspdib9",
+    "timestamp": "2026-04-16T03:02:15.352Z",
+    "type": "login",
+    "message": "Đăng nhập thành công",
+    "details": {}
+  },
+  {
+    "id": "mo0w8lrq38io1",
+    "timestamp": "2026-04-16T03:02:15.350Z",
+    "type": "system",
+    "message": "Thiết lập mật khẩu lần đầu",
+    "details": {}
+  },
+  {
+    "id": "mo0w6yt8dlxta",
+    "timestamp": "2026-04-16T03:00:58.940Z",
+    "type": "system",
+    "message": "PC Guardian khởi động trên port 3847",
+    "details": {}
+  },
+  {
+    "id": "mo0w6yssuujeh",
+    "timestamp": "2026-04-16T03:00:58.924Z",
+    "type": "monitor_start",
+    "message": "Bắt đầu giám sát process",
+    "details": {}
+  }
+]

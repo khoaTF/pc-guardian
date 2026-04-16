@@ -1,0 +1,235 @@
+[
+  {
+    "id": "cc47aed8-5b0a-43a7-8112-5b7a3d9f2445",
+    "name": "Among Us",
+    "processNames": [
+      "Among Us.exe"
+    ],
+    "category": "Party",
+    "icon": "🔪",
+    "enabled": true
+  },
+  {
+    "id": "dee482fd-5e0c-4c7d-9f53-9b5177b355f4",
+    "name": "Apex Legends",
+    "processNames": [
+      "r5apex.exe",
+      "origin.exe"
+    ],
+    "category": "Battle Royale",
+    "icon": "🏆",
+    "enabled": true
+  },
+  {
+    "id": "79e8203b-88d6-42c0-ac54-4f56f338e14d",
+    "name": "BlueStacks",
+    "processNames": [
+      "HD-Player.exe",
+      "Bluestacks.exe",
+      "BstkSVC.exe"
+    ],
+    "category": "Emulator",
+    "icon": "📱",
+    "enabled": true
+  },
+  {
+    "id": "69ccf8c4-ef63-4342-843d-6707b4761ea4",
+    "name": "Counter-Strike 2",
+    "processNames": [
+      "cs2.exe",
+      "csgo.exe"
+    ],
+    "category": "FPS",
+    "icon": "💣",
+    "enabled": true
+  },
+  {
+    "id": "4da97863-e118-46f8-9705-692d479f2723",
+    "name": "Discord",
+    "processNames": [
+      "Discord.exe",
+      "DiscordPTB.exe"
+    ],
+    "category": "Khác",
+    "icon": "🎙️",
+    "enabled": false
+  },
+  {
+    "id": "62d60963-ca3e-4da1-a1c7-d6ab6e9deaea",
+    "name": "Dota 2",
+    "processNames": [
+      "dota2.exe"
+    ],
+    "category": "MOBA",
+    "icon": "🛡️",
+    "enabled": true
+  },
+  {
+    "id": "1c6589eb-d083-4ba8-bc35-33c3c1f6ea80",
+    "name": "Epic Games",
+    "processNames": [
+      "EpicGamesLauncher.exe",
+      "EpicWebHelper.exe"
+    ],
+    "category": "Platform",
+    "icon": "🏪",
+    "enabled": true
+  },
+  {
+    "id": "6ab9dcf5-0cbc-4285-86f8-fc7ed3d2ed2f",
+    "name": "FIFA / EA FC",
+    "processNames": [
+      "FC25.exe",
+      "FIFA23.exe",
+      "FIFA24.exe"
+    ],
+    "category": "Sport",
+    "icon": "⚽",
+    "enabled": true
+  },
+  {
+    "id": "ea9d7724-b720-4b0a-aad0-79fec2eb211c",
+    "name": "Fortnite",
+    "processNames": [
+      "FortniteClient-Win64-Shipping.exe",
+      "FortniteLauncher.exe"
+    ],
+    "category": "Battle Royale",
+    "icon": "🏗️",
+    "enabled": true
+  },
+  {
+    "id": "b57f958c-b1f7-46f4-99b7-9b36a27d8adf",
+    "name": "Genshin Impact",
+    "processNames": [
+      "GenshinImpact.exe",
+      "launcher.exe",
+      "YuanShen.exe"
+    ],
+    "category": "RPG",
+    "icon": "⭐",
+    "enabled": true
+  },
+  {
+    "id": "3c1cb4df-1e52-4011-a7b1-5fe599183ee0",
+    "name": "GTA V",
+    "processNames": [
+      "GTA5.exe",
+      "GTAVLauncher.exe",
+      "PlayGTAV.exe"
+    ],
+    "category": "Action",
+    "icon": "🚗",
+    "enabled": true
+  },
+  {
+    "id": "fe54e180-4161-4a29-bf27-c7d8ad290c85",
+    "name": "Honkai Star Rail",
+    "processNames": [
+      "StarRail.exe"
+    ],
+    "category": "RPG",
+    "icon": "🌟",
+    "enabled": true
+  },
+  {
+    "id": "df526f65-1071-4d8b-af28-d4b5e0f6b3ab",
+    "name": "League of Legends",
+    "processNames": [
+      "LeagueClient.exe",
+      "League of Legends.exe"
+    ],
+    "category": "MOBA",
+    "icon": "⚔️",
+    "enabled": true
+  },
+  {
+    "id": "485471a6-8bee-4c50-b095-05bd82aa1da8",
+    "name": "Minecraft",
+    "processNames": [
+      "javaw.exe",
+      "Minecraft.Windows.exe",
+      "MinecraftLauncher.exe"
+    ],
+    "category": "Sandbox",
+    "icon": "⛏️",
+    "enabled": true
+  },
+  {
+    "id": "e674091a-2d95-44e9-bb6c-2a4cff848917",
+    "name": "NoxPlayer",
+    "processNames": [
+      "Nox.exe",
+      "NoxVMHandle.exe"
+    ],
+    "category": "Emulator",
+    "icon": "📱",
+    "enabled": true
+  },
+  {
+    "id": "32b740b3-add8-4497-94a8-c6b4e3dc243c",
+    "name": "Overwatch 2",
+    "processNames": [
+      "Overwatch.exe",
+      "Battle.net.exe"
+    ],
+    "category": "FPS",
+    "icon": "🎯",
+    "enabled": true
+  },
+  {
+    "id": "c723de35-b277-4481-b18d-aeae7a857fe5",
+    "name": "PUBG",
+    "processNames": [
+      "TslGame.exe",
+      "ExecPubg.exe"
+    ],
+    "category": "Battle Royale",
+    "icon": "🪖",
+    "enabled": true
+  },
+  {
+    "id": "23ac0389-5d09-4088-abad-b77f1bd8b671",
+    "name": "Roblox",
+    "processNames": [
+      "RobloxPlayerBeta.exe",
+      "RobloxStudioBeta.exe"
+    ],
+    "category": "Sandbox",
+    "icon": "🧱",
+    "enabled": true
+  },
+  {
+    "id": "3d9a5797-f6da-4fee-8fcb-59e8f444d7b3",
+    "name": "Steam",
+    "processNames": [
+      "steam.exe",
+      "steamwebhelper.exe"
+    ],
+    "category": "Platform",
+    "icon": "🎮",
+    "enabled": true
+  },
+  {
+    "id": "881f84a1-cf03-45f8-91b4-c319383ece69",
+    "name": "Valorant",
+    "processNames": [
+      "VALORANT-Win64-Shipping.exe",
+      "VALORANT.exe"
+    ],
+    "category": "FPS",
+    "icon": "🔫",
+    "enabled": true
+  },
+  {
+    "id": "e753d739-5fcd-472b-8d8b-cd23d6d9565f",
+    "name": "Zalo",
+    "processNames": [
+      "Zalo.exe",
+      "ZaloCall.exe"
+    ],
+    "category": "Khác",
+    "icon": "💬",
+    "enabled": false
+  }
+]

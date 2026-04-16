@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PC Guardian - Bảng điều khiển quản lý máy tính & chặn game cho trẻ em">
+  <title>PC Guardian - Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+</head>
+<body>
+  <!-- Toast notifications -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <div class="dashboard" id="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="shield">🛡️</span>
+        <div>
+          <h2>PC Guardian</h2>
+          <span class="version">v1.0.0</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-section="overview" id="navOverview">
+          <span class="icon">📊</span>
+          <span>Tổng quan</span>
+        </button>
+        <button class="nav-item" data-section="games" id="navGames">
+          <span class="icon">🎮</span>
+          <span>Danh sách chặn</span>
+          <span class="badge" id="gameCount">0</span>
+        </button>
+        <button class="nav-item" data-section="schedule" id="navSchedule">
+          <span class="icon">⏰</span>
+          <span>Lịch trình</span>
+        </button>
+        <button class="nav-item" data-section="logs" id="navLogs">
+          <span class="icon">📝</span>
+          <span>Nhật ký</span>
+        </button>
+        <button class="nav-item" data-section="settings" id="navSettings">
+          <span class="icon">⚙️</span>
+          <span>Cài đặt</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="monitor-status" id="monitorToggle">
+          <span class="status-dot active" id="statusDot"></span>
+          <span id="monitorLabel">Đang giám sát</span>
+        </div>
+        <button class="nav-item" style="margin-top: 0.5rem" id="logoutBtn">
+          <span class="icon">🚪</span>
+          <span>Đăng xuất</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      
+      <!-- ====== OVERVIEW SECTION ====== -->
+      <div class="section active" id="sectionOverview">
+        <div class="page-header">
+          <div>
+            <h1>📊 Tổng quan</h1>
+            <p class="subtitle">Thống kê hoạt động giám sát</p>
+          </div>
+          <button class="btn btn-ghost" onclick="refreshDashboard()">🔄 Làm mới</button>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-grid">
+          <div class="stat-card red">
+            <div class="stat-icon red">🚫</div>
+            <div class="stat-info">
+              <h3 id="statBlocked">0</h3>
+              <p>Game đã chặn hôm nay</p>
+            </div>
+          </div>
+          <div class="stat-card blue">
+            <div class="stat-icon blue">🎮</div>
+            <div class="stat-info">
+              <h3 id="statGames">0</h3>
+              <p>Game trong danh sách</p>
+            </div>
+          </div>
+          <div class="stat-card green">
+            <div class="stat-icon green">✅</div>
+            <div class="stat-info">
+              <h3 id="statStatus">--</h3>
+              <p>Trạng thái giám sát</p>
+            </div>
+          </div>
+          <div class="stat-card orange">
+            <div class="stat-icon orange">⏱️</div>
+            <div class="stat-info">
+              <h3 id="statUptime">--</h3>
+              <p>Thời gian hoạt động</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="chart-container">
+          <div class="chart-card">
+            <h3>📈 Biểu đồ chặn 7 ngày qua</h3>
+            <div class="bar-chart" id="weeklyChart"></div>
+          </div>
+          <div class="chart-card">
+            <h3>🏆 Game bị chặn nhiều nhất</h3>
+            <div class="top-list" id="topBlockedList">
+              <div class="empty-state">
+                <p>Chưa có dữ liệu</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent blocks -->
+        <div class="card">
+          <h3 style="margin-bottom: 1rem">🔴 Vi phạm gần đây</h3>
+          <div class="recent-blocks" id="recentBlocks">
+            <div class="empty-state">
+              <p>Chưa có vi phạm nào hôm nay</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== GAMES SECTION ====== -->
+      <div class="section" id="sectionGames">
+        <div class="page-header">
+          <div>
+            <h1>🎮 Danh sách Game chặn</h1>
+            <p class="subtitle">Quản lý các game và ứng dụng bị chặn</p>
+          </div>
+        </div>
+
+        <div class="game-controls">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="gameSearch" placeholder="Tìm kiếm game...">
+          </div>
+          <button class="btn btn-primary" onclick="openAddGameModal()">➕ Thêm game</button>
+          <button class="btn btn-ghost" onclick="openRunningProcessModal()">📋 Chọn từ process</button>
+          <button class="btn btn-ghost" onclick="cloudSyncPull()" id="syncBtn" title="Đồng bộ từ cloud">☁️ Đồng bộ</button>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem;font-size:0.8rem;color:var(--text-muted)" id="syncStatus"></div>
+
+        <!-- Category filters -->
+        <div style="display:flex;gap:0.5rem;margin-bottom:1rem;flex-wrap:wrap" id="categoryFilters"></div>
+
+        <div class="game-list" id="gameList"></div>
+
+        <!-- Scanner Section -->
+        <div class="glass-card" style="margin-top:1.5rem;padding:1.25rem">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem">
+            <div>
+              <h3 style="margin:0">🔍 Quét máy tìm game</h3>
+              <p style="color:var(--text-muted);font-size:0.8rem;margin:0.25rem 0 0">Phát hiện game crack, tải về, hoặc cài mới</p>
+            </div>
+            <div style="display:flex;gap:0.5rem">
+              <button class="btn btn-ghost" onclick="quickScanGames()" id="quickScanBtn">⚡ Quét nhanh</button>
+              <button class="btn btn-primary" onclick="fullScanGames()" id="fullScanBtn">🔍 Quét toàn bộ</button>
+            </div>
+          </div>
+          <div id="scanStatus" style="display:none;padding:0.75rem;background:rgba(108,99,255,0.1);border-radius:8px;margin-bottom:0.75rem;font-size:0.85rem">
+            ⏳ Đang quét máy tính...
+          </div>
+          <div id="scanResults"></div>
+        </div>
+      </div>
+
+      <!-- ====== SCHEDULE SECTION ====== -->
+      <div class="section" id="sectionSchedule">
+        <div class="page-header">
+          <div>
+            <h1>⏰ Lịch trình</h1>
+            <p class="subtitle">Cấu hình khung giờ cho phép chơi game</p>
+          </div>
+        </div>
+
+        <div class="game-controls">
+          <button class="btn btn-primary" onclick="openAddScheduleModal()">➕ Thêm lịch trình</button>
+          <button class="btn btn-ghost" onclick="openTempAllowModal()">⏳ Tạm cho phép</button>
+        </div>
+
+        <!-- Active temp allowances -->
+        <div id="tempAllowances" style="margin-bottom:1rem"></div>
+
+        <div class="schedule-grid" id="scheduleList"></div>
+      </div>
+
+      <!-- ====== LOGS SECTION ====== -->
+      <div class="section" id="sectionLogs">
+        <div class="page-header">
+          <div>
+            <h1>📝 Nhật ký hoạt động</h1>
+            <p class="subtitle">Lịch sử đầy đủ mọi hoạt động</p>
+          </div>
+        </div>
+
+        <div class="log-filters">
+          <select class="filter-select" id="logTypeFilter">
+            <option value="">Tất cả sự kiện</option>
+            <option value="game_blocked">🚫 Game bị chặn</option>
+            <option value="game_allowed">✅ Cho phép</option>
+            <option value="login">🔑 Đăng nhập</option>
+            <option value="settings_changed">⚙️ Cài đặt</option>
+            <option value="game_list_changed">📋 Danh sách</option>
+            <option value="temp_allow">⏳ Tạm cho phép</option>
+            <option value="system">💻 Hệ thống</option>
+          </select>
+          <input type="date" class="filter-select" id="logDateFrom" placeholder="Từ ngày">
+          <input type="date" class="filter-select" id="logDateTo" placeholder="Đến ngày">
+          <div class="search-box" style="min-width:150px">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="logSearch" placeholder="Tìm kiếm...">
+          </div>
+          <button class="btn btn-ghost btn-sm" onclick="loadLogs()">Lọc</button>
+        </div>
+
+        <div class="card" style="padding:0;overflow-x:auto">
+          <table class="log-table" id="logTable">
+            <thead>
+              <tr>
+                <th>Thời gian</th>
+                <th>Loại</th>
+                <th>Nội dung</th>
+              </tr>
+            </thead>
+            <tbody id="logBody"></tbody>
+          </table>
+        </div>
+
+        <div class="pagination" id="logPagination"></div>
+      </div>
+
+      <!-- ====== SETTINGS SECTION ====== -->
+      <div class="section" id="sectionSettings">
+        <div class="page-header">
+          <div>
+            <h1>⚙️ Cài đặt</h1>
+            <p class="subtitle">Cấu hình hệ thống PC Guardian</p>
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <h3>🔒 Giám sát</h3>
+          <div class="setting-row">
+            <div class="setting-info">
+              <h4>Bật giám sát process</h4>
+              <p>Tự động quét và chặn game khi phát hiện</p>
+            </div>
+            <div class="setting-control">
+              <label class="toggle">
+                <input type="checkbox" id="settingMonitoring" onchange="toggleMonitoring()">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="setting-row">
+            <div class="setting-info">
+              <h4>Tần suất quét</h4>
+              <p>Khoảng thời gian (giây) giữa các lần quét process</p>
+            </div>
+            <div class="setting-control">
+              <input type="number" class="input-sm" id="settingScanInterval" min="1" max="30" value="3">
+              <span style="color:var(--text-muted);font-size:0.85rem">giây</span>
+              <button class="btn btn-sm btn-ghost" onclick="saveScanInterval()">Lưu</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <h3>🔔 Thông báo</h3>
+          <div class="setting-row">
+            <div class="setting-info">
+              <h4>Hiển thị thông báo khi chặn game</h4>
+              <p>Hiện thông báo Windows khi một game bị phát hiện và chặn</p>
+            </div>
+            <div class="setting-control">
+              <label class="toggle">
+                <input type="checkbox" id="settingNotification" onchange="saveSettings()">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <h3>🔑 Mật khẩu</h3>
+          <div class="card">
+            <div class="form-group">
+              <label>Mật khẩu hiện tại</label>
+              <input type="password" id="currentPassword" placeholder="Nhập mật khẩu hiện tại">
+            </div>
+            <div class="form-group">
+              <label>Mật khẩu mới</label>
+              <input type="password" id="newPassword" placeholder="Nhập mật khẩu mới">
+            </div>
+            <button class="btn btn-primary" onclick="changePassword()">Đổi mật khẩu</button>
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <h3>🛡️ Chống gỡ bỏ (Anti-Bypass)</h3>
+          <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:1rem">
+            Ngăn trẻ tắt hoặc xóa ứng dụng. <strong style="color:var(--accent-red)">⚠️ Cần quyền Administrator</strong>
+          </p>
+          <div class="setting-row">
+            <div class="setting-info">
+              <h4>🚫 Chặn Task Manager</h4>
+              <p>Trẻ không thể mở Task Manager để tắt app</p>
+            </div>
+            <div class="setting-control">
+              <label class="toggle">
+                <input type="checkbox" id="settingBlockTaskMgr" onchange="saveProtectionSettings()">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="setting-row">
+            <div class="setting-info">
+              <h4>🚫 Chặn Registry Editor</h4>
+              <p>Ngăn truy cập Registry để xóa startup key</p>
+            </div>
+            <div class="setting-control">
+              <label class="toggle">
+                <input type="checkbox" id="settingBlockRegedit" onchange="saveProtectionSettings()">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="setting-row">
+            <div class="setting-info">
+              <h4>🚫 Chặn CMD / PowerShell</h4>
+              <p>Ngăn dùng dòng lệnh để tắt process hoặc xóa file</p>
+            </div>
+            <div class="setting-control">
+              <label class="toggle">
+                <input type="checkbox" id="settingBlockCMD" onchange="saveProtectionSettings()">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="setting-row">
+            <div class="setting-info">
+              <h4>📁 Ẩn thư mục ứng dụng</h4>
+              <p>Đặt thuộc tính ẩn cho thư mục app</p>
+            </div>
+            <div class="setting-control">
+              <label class="toggle">
+                <input type="checkbox" id="settingHideFolder" onchange="saveProtectionSettings()">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <h3>🖥️ Windows Service</h3>
+          <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:1rem">
+            Chạy app như Windows Service - tự khởi động, tự restart khi bị tắt
+          </p>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
+            <button class="btn btn-primary" onclick="installService()">📥 Cài đặt Service</button>
+            <button class="btn btn-ghost" onclick="uninstallService()" style="border-color:var(--accent-red);color:var(--accent-red)">🗑️ Gỡ Service</button>
+            <button class="btn btn-ghost" onclick="removeAllProtection()" style="border-color:var(--accent-orange);color:var(--accent-orange)">🔓 Gỡ tất cả bảo vệ</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ====== ADD GAME MODAL ====== -->
+  <div class="modal-overlay" id="addGameModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>➕ Thêm game mới</h3>
+        <button class="modal-close" onclick="closeModal('addGameModal')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Tên game / ứng dụng</label>
+          <input type="text" id="newGameName" placeholder="VD: Liên Minh Huyền Thoại">
+        </div>
+        <div class="form-group">
+          <label>Tên process (.exe)</label>
+          <input type="text" id="newGameProcess" placeholder="VD: LeagueClient.exe, League of Legends.exe">
+          <p style="color:var(--text-muted);font-size:0.75rem;margin-top:4px">Nhiều process cách nhau bởi dấu phẩy</p>
+        </div>
+        <div class="form-group">
+          <label>Danh mục</label>
+          <select id="newGameCategory">
+            <option value="FPS">FPS</option>
+            <option value="MOBA">MOBA</option>
+            <option value="RPG">RPG</option>
+            <option value="Battle Royale">Battle Royale</option>
+            <option value="Sport">Sport</option>
+            <option value="Action">Action</option>
+            <option value="Sandbox">Sandbox</option>
+            <option value="Emulator">Emulator</option>
+            <option value="Platform">Platform</option>
+            <option value="Party">Party</option>
+            <option value="Khác">Khác</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" onclick="closeModal('addGameModal')">Hủy</button>
+        <button class="btn btn-primary" onclick="addGame()">Thêm game</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== RUNNING PROCESS MODAL ====== -->
+  <div class="modal-overlay" id="processModal">
+    <div class="modal" style="max-width:600px">
+      <div class="modal-header">
+        <h3>📋 Process đang chạy</h3>
+        <button class="modal-close" onclick="closeModal('processModal')">✕</button>
+      </div>
+      <div class="modal-body" style="max-height:50vh;overflow-y:auto">
+        <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:1rem">Chọn process để thêm vào danh sách chặn</p>
+        <div id="processList">Đang tải...</div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" onclick="closeModal('processModal')">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== ADD SCHEDULE MODAL ====== -->
+  <div class="modal-overlay" id="addScheduleModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>➕ Thêm lịch trình</h3>
+        <button class="modal-close" onclick="closeModal('addScheduleModal')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Áp dụng cho</label>
+          <select id="scheduleGame">
+            <option value="__all__">Tất cả game</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Giờ bắt đầu cho phép</label>
+          <input type="time" id="scheduleStart" value="19:00">
+        </div>
+        <div class="form-group">
+          <label>Giờ kết thúc</label>
+          <input type="time" id="scheduleEnd" value="20:00">
+        </div>
+        <div class="form-group">
+          <label>Các ngày trong tuần</label>
+          <div class="day-selector" id="daySelector">
+            <label onclick="this.classList.toggle('selected')" data-day="1">T2</label>
+            <label onclick="this.classList.toggle('selected')" data-day="2">T3</label>
+            <label onclick="this.classList.toggle('selected')" data-day="3">T4</label>
+            <label onclick="this.classList.toggle('selected')" data-day="4">T5</label>
+            <label onclick="this.classList.toggle('selected')" data-day="5">T6</label>
+            <label onclick="this.classList.toggle('selected')" data-day="6">T7</label>
+            <label onclick="this.classList.toggle('selected')" data-day="0">CN</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Ghi chú</label>
+          <input type="text" id="scheduleLabel" placeholder="VD: Giờ chơi game buổi tối">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" onclick="closeModal('addScheduleModal')">Hủy</button>
+        <button class="btn btn-primary" onclick="addSchedule()">Tạo lịch</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== TEMP ALLOW MODAL ====== -->
+  <div class="modal-overlay" id="tempAllowModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>⏳ Tạm thời cho phép</h3>
+        <button class="modal-close" onclick="closeModal('tempAllowModal')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Cho phép game nào</label>
+          <select id="tempAllowGame">
+            <option value="__all__">Tất cả game</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Thời gian cho phép</label>
+          <select id="tempAllowDuration">
+            <option value="15">15 phút</option>
+            <option value="30" selected>30 phút</option>
+            <option value="60">1 giờ</option>
+            <option value="120">2 giờ</option>
+            <option value="180">3 giờ</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" onclick="closeModal('tempAllowModal')">Hủy</button>
+        <button class="btn btn-success" onclick="setTempAllow()">Cho phép</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
